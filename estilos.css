@@ -2,6 +2,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Fira Sans', sans-serif;
     }
     
     .container {
@@ -14,7 +15,7 @@
 
 
     .slider {
-        background-color: #f2f2f2;
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/effort-stack.appspot.com/o/Sistema%2FSistemaBackground.png?alt=media&token=941b65b3-c286-4dfd-ba1a-46189b27856e");
         padding: 40px 0;
     }
 
@@ -29,10 +30,10 @@
     .slider___body {
         grid-column: 2/3;
         grid-row: 1/2;
-        opacity: 0.;
+        opacity: 0;
         pointer-events: none;
         display: grid;
-        background-color: #f2f2f2;
+        background-color: #f2f2;
         grid-template-columns: 1fr max-content;
         align-items: center;
         transition: opacity 1.5s;
@@ -58,6 +59,7 @@
         font-weight: 300;
         font-size: 20px;
         line-height: 1.7;
+        text-align: justify;
     }
 
     .slider__img {
@@ -76,4 +78,68 @@
 
     .slider__arrow:nth-of-type(2) {
         justify-self: end;
+    }
+
+    .theme1 {
+        color: #7C617A;
+        font-size:50px;
+    }
+
+    .theme2 {
+        color: #5A7870;
+        font-size:50px;
+    }
+    .theme3 {
+        color: #BA9621;
+        font-size:50px;
+    }
+
+
+    @media (max-width: 768px) {
+
+        .slider___body {
+            grid-template-columns: 1fr;
+            grid-template-columns: max-content 1fr;
+            gap: 1em;
+        }
+
+
+        .slider__picture {
+            grid-row: 1/2;
+        }
+
+        .slider__img {
+            width: 210px;
+            height: 210px;
+        }
+    }
+
+
+    @media (max-width: 425px) {
+
+        .slider___body {
+            grid-template-columns: 25px 1fr 25px ;
+            grid-template-columns: max-content 1fr ;
+        }
+
+
+        .slider__arrow{
+            width: 100%;
+
+        }
+
+        .slider__img {
+            width: 180px;
+            height: 180px;
+        }
+        
+        .subtitle {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .slider__review {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
     }
